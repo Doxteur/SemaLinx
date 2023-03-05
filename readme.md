@@ -31,4 +31,4 @@ To setup ssh go to server/env.js. The following ssh variables are available:
 - `SSH_USERNAME` - The the username of the ssh machine.
 - `SSH_PASSWORD` - The password of the ssh machine.
 
-To add or modify a semabox go to client/semaboxlist.js.
+To add or modify a semabox go to client/src/semaboxlist.js.
