@@ -1,13 +1,10 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { API_URL } from "../Config";
 
 function Request() {
   const [command, setCommand] = useState();
   const [host] = useState();
   const [port] = useState("22");
-  const [username] = useState("test");
-  const [password] = useState("test");
   const [results, setResults] = useState("");
 
   const handleSubmit = async (e) => {

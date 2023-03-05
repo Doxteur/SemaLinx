@@ -1,41 +1,13 @@
 import StatusCard from "components/StatusCard";
 import PageVisitsCard from "components/PageVisitsCard";
 import Sidebar from "components/Sidebar";
-import { useEffect, useState } from "react";
-import axios from "axios";
-export default function Dashboard() {
-  const [box, setBox] = useState([
-    {
-      id: 1,
-      name: "Box 1",
-      ip: "192.168.0.41",
-      status: "Online",
-    },
-    {
-      id: 2,
-      name: "Box 2",
-      ip: "192.168.0.41",
-      status: "Offline",
-    },
-    {
-      id: 3,
-      name: "Box 3",
-      ip: "192.168.0.41",
-      status: "Online",
-    },
-    {
-      id: 4,
-      name: "Box 4",
-      ip: "192.168.0.41",
-      status: "Offline",
-    },
-  ]);
+import {useState } from "react";
+import {semaboxList} from "../semaboxlist";
 
-  useEffect(() => {
-    axios.get("api/box").then((res) => {
-      console.log(res.data);
-    });
-  }, []);
+export default function Dashboard() {
+  const [box, setBox] = useState(semaboxList);
+
+
   return (
     <>
       <Sidebar />

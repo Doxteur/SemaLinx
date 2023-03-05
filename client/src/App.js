@@ -6,7 +6,6 @@ import Request from "components/Request";
 
 // Tailwind CSS Style Sheet
 import "assets/styles/tailwind.css";
-import axios from "axios";
 
 function App() {
   const [isLogged, setIsLogged] = useState(localStorage.getItem("isLogged"));

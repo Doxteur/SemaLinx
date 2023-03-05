@@ -5,7 +5,6 @@ import axios from "axios";
 
 function ModalSemaBox({ selectedBox, setBox }) {
   const [ping, setPing] = useState(0);
-  const [responseState, setResponseState] = useState(0);
   const [debit, setDebit] = useState("Calcul");
   const [customCommand, setCustomCommand] = useState("");
   const [customCommandResponse, setCustomCommandResponse] = useState("");
@@ -51,7 +50,6 @@ function ModalSemaBox({ selectedBox, setBox }) {
           const ping = response.data.split("time=")[1].split(" ")[0];
           setPing(ping);
         } else if (command === "response") {
-          setResponseState(response.data);
         } else if (command === "debit") {
           const debit = response.data.split(" ")[1].split("M")[0];
           setDebit(debit);
